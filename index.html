@@ -60,14 +60,14 @@
       gtag("config", "UA-76430489-2");
 
       // Loads the Linker plugin
-      ga("require", "linker");
+      gtag("require", "linker");
 
       // Gets a reference to a link pointing to an external domain.
       var destinationLink = document.getElementById("destination-link");
 
       // Adds click handler that decorates `destinationLink`.
       destinationLink.addEventListener("click", function() {
-        ga("linker:decorate", destinationLink);
+        gtag("linker:decorate", destinationLink);
       });
     </script>
   </body>
