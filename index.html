@@ -27,7 +27,7 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <a href="https://eventdata.uk/Forms/Default.aspx?FormRef=SDS00VisitorDev"><button>click here</button></a
+    <a id="destination-link" href="https://eventdata.uk/Forms/Default.aspx?FormRef=SDS00VisitorDev"><button>click here</button></a
     >
     <script src="js/vendor/modernizr-3.8.0.min.js"></script>
     <script
@@ -58,6 +58,17 @@
       gtag("js", new Date());
 
       gtag("config", "UA-76430489-2");
+
+      // Loads the Linker plugin
+      ga("require", "linker");
+
+      // Gets a reference to a link pointing to an external domain.
+      var destinationLink = document.getElementById("destination-link");
+
+      // Adds click handler that decorates `destinationLink`.
+      destinationLink.addEventListener("click", function() {
+        ga("linker:decorate", destinationLink);
+      });
     </script>
   </body>
 </html>
