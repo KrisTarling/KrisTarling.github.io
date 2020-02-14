@@ -29,6 +29,32 @@
     <!-- Add your site or application content here -->
     <a id="destination-link" href="https://eventdata.uk/Forms/Default.aspx?FormRef=SDS00VisitorDev"><button>click here</button></a
     >
+    <br />
+    <p>gtag code on this page:</p>
+    <br />
+    <pre><code><script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-76430489-2"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-76430489-2", {
+        linker: {
+          domains: ["eventdata.uk"]
+        }
+      });
+    </script></code></pre>
+    <br />
+    <p>
+      this code will add a URL parameter beginning with '&_ga=' to the link,
+      allowing the google analytics client ID to be passed to the external page
+    </p>
     <script src="js/vendor/modernizr-3.8.0.min.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.4.1.min.js"
